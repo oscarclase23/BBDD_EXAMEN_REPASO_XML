@@ -1,19 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="30dp"
+    android:layout_margin="15dp"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvLabelNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/hint_name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_name"
+        android:inputType="textPersonName"
+        android:layout_below="@id/tvLabelNombre"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_background"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/tvLabelSueldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_salary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/etNombre"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/etSueldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_salary"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/tvLabelSueldo"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_background"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etSueldo"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp"
+        android:layout_centerInParent="true"
+        >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:text="Guardar"
+        android:background="@drawable/edittext_background"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente Pantalla"
+        android:background="@drawable/edittext_background"
+        />
+
+    </LinearLayout>
+
+</RelativeLayout>

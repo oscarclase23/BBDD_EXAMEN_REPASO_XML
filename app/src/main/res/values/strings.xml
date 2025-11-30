@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BDDD_EXAMEN_REPASO_XML</string>
+    <!-- Campos -->
+    <string name="hint_name">Nombre</string>
+    <string name="hint_salary">Sueldo</string>
+    <!-- Botones -->
+    <string name="btn_add">Agregar a BD</string>
+    <string name="btn_next">Siguiente</string>
 </resources>
