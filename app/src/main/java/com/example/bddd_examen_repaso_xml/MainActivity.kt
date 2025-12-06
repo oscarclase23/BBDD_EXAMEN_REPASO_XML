@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
 
 
         if (id != -1L) {
-            Toast.makeText(this, "Empleado guardado con ID: $id", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Empleado guardado", Toast.LENGTH_SHORT).show()
             limpiarCampos()
         } else {
             Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show()

@@ -103,4 +103,12 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(
         db.close()
         return rows
     }
+
+    fun deleteAll(): Int {
+        val db = writableDatabase
+        val rows = db.delete(EmpleadoContract.TABLE_NAME, null, null)
+        db.close()
+        return rows
+    }
+
 }

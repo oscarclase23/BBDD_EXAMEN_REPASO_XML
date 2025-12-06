@@ -1,5 +1,6 @@
 package com.example.bddd_examen_repaso_xml
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -45,7 +46,31 @@ class ListaActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@ListaActivity)
             adapter = this@ListaActivity.adapter
         }
+        binding.btnEliminarBD.setOnClickListener {
+            eliminarTodosEmpleados()
+        }
+
+        binding.btnVolver.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
     }
+
+
+    private fun eliminarTodosEmpleados(){
+        // Confirmación antes de borrar
+        val empleados = empleadosCompletos
+        if (empleados.isEmpty()) {
+            Toast.makeText(this, "No hay empleados para eliminar", Toast.LENGTH_SHORT).show()
+            return
+        }
+        dbHelper.deleteAll()
+        Toast.makeText(this, "Todos los empleados eliminados", Toast.LENGTH_SHORT).show()
+        cargarEmpleados() // Recargar lista
+    }
+
+
 
     private fun eliminarEmpleado(empleado: Empleado) {
         dbHelper.delete(empleado.id)

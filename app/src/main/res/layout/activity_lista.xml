@@ -4,10 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="25dp"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".ListaActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver"
+            android:layout_marginEnd="30dp"
+           />
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,6 +29,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
 
     <Spinner
         android:id="@+id/spinnerFiltro"
@@ -39,8 +54,20 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewEmpleados"
+        android:background="@drawable/edittext_background"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/btnEliminarBD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Eliminar Todos" />
+
 
 </LinearLayout>
 
