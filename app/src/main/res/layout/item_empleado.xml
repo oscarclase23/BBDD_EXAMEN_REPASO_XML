@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+
+    <RelativeLayout
+        android:id="@+id/mainCard"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:id="@+id/ivChanchitoCard"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_chanchito"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"/>
+
+
+        <TextView
+            android:id="@+id/tvNombreCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/ivChanchitoCard"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:id="@+id/tvSueldoCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120€"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"/>
+
+        <ImageView
+            android:id="@+id/ivTrash"
+            android:src="@drawable/outline_delete_24"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/tvSueldoCard"
+            android:layout_alignParentEnd="true"
+            />
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
