@@ -70,6 +70,7 @@
         >
 
     <Button
+        android:id="@+id/btnGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
@@ -77,8 +78,8 @@
         android:background="@drawable/edittext_background"
         />
 
-
     <Button
+        android:id="@+id/btnSiguientePantalla"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Siguiente Pantalla"
