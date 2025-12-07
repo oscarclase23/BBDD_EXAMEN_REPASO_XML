@@ -36,7 +36,9 @@ class ListaActivity : AppCompatActivity() {
         setupSpinner()
     }
 
-
+    /**
+     *
+     */
     private fun setupRecyclerView() {
         adapter = EmpleadoAdapter(emptyList())
         adapter.setOnDeleteClickListener { empleado ->

@@ -5,7 +5,17 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-
+/**
+ * Clase ayudante para gestionar la base de datos de empleados.
+ *
+ * Esta clase hereda de [SQLiteOpenHelper] y gestiona la creación, actualización
+ * y las operaciones CRUD (Create, Read, Update, Delete) sobre la tabla de empleados.
+ * Utiliza las constantes definidas en [EmpleadoContract].
+ *
+ * @property context Contexto de la aplicación, necesario para crear la base de datos.
+ * @author Óscar
+ * @since 1.0
+ */
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(
     context,
     EmpleadoContract.DATABASE_NAME,
@@ -13,7 +23,13 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(
     EmpleadoContract.DATABASE_VERSION
 ) {
 
-
+    /**
+     * Se llama cuando la base de datos se crea por primera vez.
+     *
+     * Ejecuta la sentencia SQL para crear la tabla definida en [EmpleadoContract.TABLE_NAME].
+     *
+     * @param db La base de datos donde ejecutar el SQL.
+     */
     override fun onCreate(db: SQLiteDatabase?) {
         val createTable = """
            CREATE TABLE ${EmpleadoContract.TABLE_NAME} (
